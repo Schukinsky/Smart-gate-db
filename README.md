@@ -23,41 +23,35 @@
 ## <a id="title2">ER-диаграмма</a>
 
 ## <a id="title3">Сущности</a>
-- Таблица Address (Адреса)
-id (Primary Key)
-name
+1. Таблица Address (Адреса)  
+- id (Primary Key)
+- name  (наименование адреса)
 
-User
-id (Primary Key)
-last_name
-first_name
-middle_name
-phone
-email
-FK_address
+2. Таблица User (Пользователи)
+- id (Primary Key)
+- last_name (фамилия)
+- first_name (имя)
+- middle_name (отчество)
+- phone (номер телефона пользователя, уникальный)
+- email (email адрес)
+- FK_address (внешний ключ, связанный с таблицей Address)
 
-Таблица Users (Пользователи):
-user_id (идентификатор пользователя, первичный ключ)
-username (имя пользователя)
-phone_number (номер телефона пользователя, уникальный)
-phone_number_start_date (дата начала действия номера телефона)
-phone_number_end_date (дата окончания действия номера телефона)
-phone_number_blocked (блокировка номера телефона: да/нет)
+3. Таблица AccessEntity (Объекты доступа)
+- id (Primary Key)
+- FK_user (внешний ключ, связанный с таблицей User)
+- entity_type (тип сущности: 'phone' или 'vehicle')
+- entity_number (номер телефона или номер транспортного средства, уникальный)
+- start_dt (дата начала)
+- end_dt (дата окончания)
+- blocked (блокировка: да/нет)
 
-Таблица AccessEntities (Доступные сущности):
-entity_id (идентификатор сущности, первичный ключ)
-entity_type (тип сущности: 'phone' или 'vehicle')
-entity_number (номер телефона или номер транспортного средства, уникальный)
-start_date (дата начала действия сущности)
-end_date (дата окончания действия сущности)
-blocked (блокировка сущности: да/нет)
-
-Таблица AccessLogs (Журнал доступа):
-log_id (идентификатор записи в журнале, первичный ключ)
-user_id (идентификатор пользователя, внешний ключ связанный с таблицей Users)
-entity_id (идентификатор сущности, внешний ключ связанный с таблицей AccessEntities)
-access_time (время доступа)
-success (успешный доступ: да/нет)
+4. Таблица Event (Журнал событий)
+- id (Primary Key)
+- FK_user (внешний ключ, связанный с таблицей User)
+- FK_AccessEntity (внешний ключ, связанный с таблицей AccessEntity)
+- access_time (время доступа)
+- vehicle_number (номер транспортного средства)
+- success (успешный доступ: да/нет)
 
 ## <a id="title4">Типы данных</a>
 
@@ -86,7 +80,7 @@ CREATE TABLE IF NOT EXISTS gate_01.user (
 	FK_address INTEGER REFERENCES gate_01.address(id) ON DELETE CASCADE
 	);
 CREATE TABLE Access_entities (
-    entity_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     entity_type VARCHAR(10), -- 'phone' или 'vehicle'
     entity_number VARCHAR(20) UNIQUE,
     start_date DATE,
@@ -102,7 +96,7 @@ CREATE TABLE AccessLogs (
     success BOOLEAN,
     FOREIGN KEY (user_id) REFERENCES Users(user_id),
     FOREIGN KEY (entity_id) REFERENCES AccessEntities(entity_id)
-);
+	);
 ```
 ## <a id="title7">Хранимые процедуры</a>
 - Создание пользователя:
