@@ -23,11 +23,11 @@
 ## <a id="title2">ER-диаграмма</a>
 
 ## <a id="title3">Сущности</a>
-1. Таблица Address (Адреса)  
+#### 1. Address (Адреса)  
 - id (Primary Key)
 - name  (наименование адреса)
 
-2. Таблица User (Пользователи)
+#### 2. User (Пользователи)
 - id (Primary Key)
 - last_name (фамилия)
 - first_name (имя)
@@ -36,7 +36,7 @@
 - email (email адрес)
 - FK_address (внешний ключ, связанный с таблицей Address)
 
-3. Таблица AccessEntity (Объекты доступа)
+#### 3. AccessEntity (Объекты доступа)
 - id (Primary Key)
 - FK_user (внешний ключ, связанный с таблицей User)
 - entity_type (тип сущности: 'phone' или 'vehicle')
@@ -45,12 +45,14 @@
 - end_dt (дата окончания)
 - blocked (блокировка: да/нет)
 
-4. Таблица Event (Журнал событий)
+#### 4. Event (Журнал событий)
 - id (Primary Key)
 - FK_user (внешний ключ, связанный с таблицей User)
 - FK_AccessEntity (внешний ключ, связанный с таблицей AccessEntity)
 - access_time (время доступа)
 - vehicle_number (номер транспортного средства)
+- direction (направление)
+- photo_url (cсылка на фотографию)
 - success (успешный доступ: да/нет)
 
 ## <a id="title4">Типы данных</a>
