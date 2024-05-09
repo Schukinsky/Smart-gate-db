@@ -1,6 +1,6 @@
-#Data base for smart gate
+# Data base for smart gate
 
-##Навигация:
+## Навигация:
 [Описание](#title1)
 [ER-диаграмма](#title2)
 [Сущности](#title3)
