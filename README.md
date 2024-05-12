@@ -47,11 +47,10 @@
 
 #### 4. Event (Журнал событий)
 - id (Primary Key)
-- FK_user (внешний ключ, связанный с таблицей User)
 - FK_AccessEntity (внешний ключ, связанный с таблицей AccessEntity)
 - access_time (время доступа)
 - vehicle_number (номер транспортного средства)
-- direction (направление)
+- FK_camera (внешний ключ, связанный с таблицей Camera)
 - photo_url (cсылка на фотографию)
 - success (успешный доступ: да/нет)
 
