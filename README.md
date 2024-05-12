@@ -70,7 +70,7 @@
 [DDL.sql](DDL.sql)
 ## <a id="title7">Хранимые процедуры</a>
 #### 1. Управление доступом:
-- Создание пользователя [procedure_create_user_.sql](procedure_create_user.sql)
+- Создание пользователя [procedure_create_user.sql](procedure_create_user.sql)
 - Добавление объектов доступа ('phone','vehicle') для user.id
 - Блокировка всех объектов доступа по adress.id
 - Блокировка всех объектов доступа по user.id
