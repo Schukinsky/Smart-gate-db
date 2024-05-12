@@ -31,4 +31,4 @@ END;
 $$;
 
 
-CALL gate01.create_user('Doe', 'John', 'Robert', '123456789', 'john.doe@example.com', '123 Main St');
+--CALL gate01.create_user('Doe', 'John', 'Robert', '123456789', 'john.doe@example.com', '123 Main St');
