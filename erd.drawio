@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-05-12T16:27:34.014Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="ixnDucJ6wJvjA8IRoeW0" version="24.2.5" type="device">
+<mxfile host="Electron" modified="2024-05-12T16:36:14.259Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Gr6HNe6UV0SDnXZM67fx" version="24.2.5" type="device">
   <diagram name="Страница — 1" id="ZFLMnjEEjDK_UrK1XO5l">
     <mxGraphModel dx="1221" dy="725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -248,7 +248,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8xm2RryPE5Os0l2a6KrY-89" value="FK_&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;AccessEntity&lt;/span&gt;" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=default;labelBorderColor=none;" parent="8xm2RryPE5Os0l2a6KrY-87" vertex="1">
+        <mxCell id="8xm2RryPE5Os0l2a6KrY-89" value="FK_&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;pass&lt;/span&gt;" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=default;labelBorderColor=none;" parent="8xm2RryPE5Os0l2a6KrY-87" vertex="1">
           <mxGeometry x="30" width="150" height="30" as="geometry">
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
