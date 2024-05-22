@@ -82,7 +82,7 @@
 - Въезд/выезд по камере
 - Въезд/выезд  по номеру телефона
 
-#### 3. Добавления события
+#### 3. Добавление событий
 - Въезд по камере [procedure_add_event_camera_in.sql](procedure_add_event_camera_in.sql)
 - Выезд по камере [procedure_add_event_camera_out.sql](procedure_add_event_camera_out.sql)
 - Въезд/выезд по номеру телефона [procedure_add_event_call.sql](procedure_add_event_call.sql)
