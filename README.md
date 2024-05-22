@@ -7,7 +7,9 @@
 [Типы данных](#title4)
 [Индексы](#title5)
 [DDL](#title6)
-[Хранимые процедуры](#title7)
+[DML](#title7)
+[Хранимые процедуры](#title8)
+[Функции](#title9)
 
 
 ## <a id="title1">Описание</a>
@@ -68,10 +70,13 @@
 
 ## <a id="title6">DDL</a>
 [DDL.sql](DDL.sql)
-## <a id="title7">Хранимые процедуры</a>
+## <a id="title7">DDL</a>
+[DML.sql](DML.sql)
+## <a id="title8">Хранимые процедуры</a>
 #### 1. Управление доступом:
 - Создание пользователя [procedure_create_user.sql](procedure_create_user.sql)
-- Добавление объектов доступа ('phone','vehicle') для user.id
+- Добавление пропуска по номеру телефона [procedure_add_pass_phone.sql](procedure_add_pass_phone.sql)
+- Добавление пропуска по номеру траспортного средства [procedure_add_pass_vehicle.sql](procedure_add_pass_vehicle.sql)
 - Блокировка всех объектов доступа по adress.id
 - Блокировка всех объектов доступа по user.id
 - Блокировка объекта доступа по pass.id
@@ -84,7 +89,9 @@
 - Въезд/выезд  по номеру телефона
 
 #### 3. Добавления события
-- Въезд/выезд по камере
-- Въезд/выезд по номеру телефона [procedure_add_event.sql](procedure_add_event.sql)
-
+- Въезд по камере [procedure_add_event_camera_in.sql](procedure_add_event_camera_in.sql)
+- Выезд по камере [procedure_add_event_camera_out.sql](procedure_add_event_camera_out.sql)
+- Въезд/выезд по номеру телефона [procedure_add_event_call.sql](procedure_add_event_call.sql)
+## <a id="title9">Функции</a>
+[generate_photo_name.sql](function_generate_photo_name.sql)
 
