@@ -70,9 +70,10 @@
 - Создание пользователя [procedure_create_user.sql](procedure_create_user.sql)
 - Добавление пропуска по номеру телефона [procedure_add_pass_phone.sql](procedure_add_pass_phone.sql)
 - Добавление пропуска по номеру траспортного средства [procedure_add_pass_vehicle.sql](procedure_add_pass_vehicle.sql)
-- Блокировка всех объектов доступа по adress.id
-- Блокировка всех объектов доступа по user.id
-- Блокировка объекта доступа по pass.id
+- Изменение пропуска по номеру телефона [procedure_edit_pass_phone.sql](procedure_edit_pass_phone.sql)
+- Изменение пропуска по траспортного средства [procedure_edit_pass_vehicle.sql](procedure_edit_pass_vehicle.sql)
+- Блокировка всех объектов доступа по номеру телефона пользователя [procedure_block_allpass.sql](procedure_block_allpass.sql)
+- Разблокировка всех объектов доступа по номеру телефона пользователя [procedure_unblock_allpass.sql](procedure_unblock_allpass.sql)
 
 #### 2. Статистика:
 - Вывод всех пользователей и всех объектов доступа со статусом
