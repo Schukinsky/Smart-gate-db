@@ -17,12 +17,11 @@ CREATE TABLE IF NOT EXISTS gate01.user (
 CREATE TABLE gate01.pass (
 	id SERIAL PRIMARY KEY,
 	FK_user INTEGER REFERENCES gate01.user(id) ON DELETE CASCADE,
-	FK_pass_type INTEGER REFERENCES gate01.pass_type(id) ON DELETE CASCADE,
 	phone_number VARCHAR(20) UNIQUE,
 	vehicle_number VARCHAR(20) UNIQUE,
 	start_date DATE,
 	end_date DATE,
-	blocked BOOLEAN
+	blocked BOOLEAN DEFAULT FALSE
 	);
 CREATE TABLE gate01.camera (
 	id SERIAL PRIMARY KEY,
