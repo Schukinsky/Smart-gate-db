@@ -25,44 +25,37 @@
 ## <a id="title2">ER-диаграмма</a>
 ![](erd.png)
 ## <a id="title3">Сущности</a>
-#### 1. Address (Адреса)  
-- id (Primary Key)
-- name  (наименование адреса)
-
-#### 2. User (Пользователи)
+#### 1. User (Пользователи)
 - id (Primary Key)
 - last_name (фамилия)
 - first_name (имя)
 - middle_name (отчество)
 - phone (номер телефона пользователя, уникальный)
 - email (email адрес)
-- FK_address (внешний ключ, связанный с таблицей address)
+- address (наименование адреса)
 
-#### 3. Pass_type (Тыпы объектов доступа)  
-- id (Primary Key)
-- name  (наименование объекта доступа)
-
-#### 4. Pass (Объекты доступа)
+#### 2. Pass (Объекты доступа)
 - id (Primary Key)
 - FK_user (внешний ключ, связанный с таблицей user)
-- FK_pass_type (тип сущности: 'phone' или 'vehicle')
-- pass_number (номер телефона или номер транспортного средства)
+- phone_number
+- vehicle_number (номер телефона или номер транспортного средства)
 - start_dt (дата начала)
 - end_dt (дата окончания)
 - blocked (блокировка: да/нет)
 
-#### 5. Camera (Камеры)  
+#### 3. Camera (Камеры)  
 - id (Primary Key)
 - name  (наименование камеры)
 
-#### 6. Event (Журнал событий)
+#### 4. Event (Журнал событий)
 - id (Primary Key)
 - FK_pass (внешний ключ, связанный с таблицей pass)
-- access_time (время доступа)
+- event_time (время события)
 - vehicle_number (номер транспортного средства)
 - FK_camera (внешний ключ, связанный с таблицей camera)
 - photo_url (cсылка на фотографию)
 - success (успешный доступ: да/нет)
+- note (примечание)
 
 ## <a id="title4">Типы данных</a>
 
@@ -70,7 +63,7 @@
 
 ## <a id="title6">DDL</a>
 [DDL.sql](DDL.sql)
-## <a id="title7">DDL</a>
+## <a id="title7">DML</a>
 [DML.sql](DML.sql)
 ## <a id="title8">Хранимые процедуры</a>
 #### 1. Управление доступом:
