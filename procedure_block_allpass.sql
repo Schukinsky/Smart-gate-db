@@ -24,7 +24,7 @@ BEGIN
         FK_user = user_id;
 	END;
 
-    -- Возвращаем сообщение о успешном добавлении пропуска
+    -- Возвращаем сообщение об успешной блокировки всех пропусков пользователя
     RAISE NOTICE 'All passes successfully blocked for user with phone %', p_user_phone;
 END;
 $$;
