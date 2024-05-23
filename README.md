@@ -39,8 +39,8 @@
 - FK_user (внешний ключ, связанный с таблицей user)
 - phone_number (номер телефона)
 - vehicle_number (номер транспортного средства)
-- start_dt (дата начала)
-- end_dt (дата окончания)
+- start_date (дата начала)
+- end_date (дата окончания)
 - blocked (блокировка: да/нет)
 
 #### 3. Camera (Камеры)  
@@ -82,7 +82,7 @@
 - Въезд/выезд по камере
 - Въезд/выезд  по номеру телефона
 
-#### 3. Добавления события
+#### 3. Добавление событий
 - Въезд по камере [procedure_add_event_camera_in.sql](procedure_add_event_camera_in.sql)
 - Выезд по камере [procedure_add_event_camera_out.sql](procedure_add_event_camera_out.sql)
 - Въезд/выезд по номеру телефона [procedure_add_event_call.sql](procedure_add_event_call.sql)
