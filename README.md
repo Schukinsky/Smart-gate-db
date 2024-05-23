@@ -88,5 +88,5 @@
 - Функция получения информации о пропусках [function_get_passes_info.sql](function_get_passes_info.sql)
 - Функция генерации имени фото [generate_photo_name.sql](function_generate_photo_name.sql)
 ## <a id="title10">Представления</a>
-- Вывод всех пропусков [viev_all_passes.sql](viev_all_passes.sql)
-- Вывод всех действующих пропусков [viev_active_passes.sql](viev_active_passes.sql)
+- Вывод всех пропусков [view_all_passes.sql](view_all_passes.sql)
+- Вывод всех действующих пропусков [view_active_passes.sql](view_active_passes.sql)
