@@ -10,6 +10,7 @@
 [DML](#title7)
 [Хранимые процедуры](#title8)
 [Функции](#title9)
+[Представления](#title10)
 
 
 ## <a id="title1">Описание</a>
@@ -76,16 +77,16 @@
 - Разблокировка всех объектов доступа по номеру телефона пользователя [procedure_unblock_allpass.sql](procedure_unblock_allpass.sql)
 
 #### 2. Статистика:
-- Вывод всех пользователей и всех объектов доступа со статусом
-- Вывод всех пользователей и всех объектов доступа по адресу со статусом
-- Вывод всех объектов доступа по пользователю со статусом
-- Въезд/выезд по камере
-- Въезд/выезд  по номеру телефона
+- Статистика по событиям отказа доступа [stat_event.sql](stat_event.sql)
+- Отчет о транспортных средствах на территории [stat_entries.sql](stat_entries.sql)
 
 #### 3. Добавление событий
 - Въезд по камере [procedure_add_event_camera_in.sql](procedure_add_event_camera_in.sql)
 - Выезд по камере [procedure_add_event_camera_out.sql](procedure_add_event_camera_out.sql)
 - Въезд/выезд по номеру телефона [procedure_add_event_call.sql](procedure_add_event_call.sql)
 ## <a id="title9">Функции</a>
-[generate_photo_name.sql](function_generate_photo_name.sql)
-
+- Функция получения информации о пропусках [function_get_passes_info.sql](function_get_passes_info.sql)
+- Функция генерации имени фото [generate_photo_name.sql](function_generate_photo_name.sql)
+## <a id="title10">Представления</a>
+- Вывод всех пропусков [viev_all_passes.sql](viev_all_passes.sql)
+- Вывод всех действующих пропусков [viev_active_passes.sql](viev_active_passes.sql)
