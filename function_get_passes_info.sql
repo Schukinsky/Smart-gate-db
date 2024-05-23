@@ -1,6 +1,9 @@
-CREATE OR REPLACE FUNCTION gate01.get_passes_info(apply_conditions BOOLEAN DEFAULT FALSE)
+CREATE OR REPLACE FUNCTION gate01.get_passes_info(
+    apply_conditions BOOLEAN DEFAULT FALSE,
+    u_phone VARCHAR(20) DEFAULT NULL
+)
 RETURNS TABLE (
-	full_name TEXT,
+    full_name TEXT,
     user_address VARCHAR(255),
     user_phone VARCHAR(20),
     user_email VARCHAR(255),
@@ -32,6 +35,7 @@ BEGIN
         WHERE 
             p.blocked = FALSE
             AND CURRENT_DATE BETWEEN p.start_date AND p.end_date
+            AND (u_phone IS NULL OR u.phone = u_phone)
         ORDER BY 
             u.address;
     ELSE
@@ -51,11 +55,17 @@ BEGIN
             gate01.user u 
         ON 
             p.FK_user = u.id
+        WHERE
+            u_phone IS NULL OR u.phone = u_phone
         ORDER BY 
             u.address;
     END IF;
 END;
 $$;
 
---SELECT * FROM gate01.get_passes_info(TRUE); -- все пропуска
+
+
+--SELECT * FROM gate01.get_passes_info(FALSE); -- все пропуска
 --SELECT * FROM gate01.get_passes_info(TRUE); -- только активные пропуска
+--SELECT * FROM gate01.get_passes_info(FALSE, '79260000000'); -- все пропуска пользователя с номером телефона
+--SELECT * FROM gate01.get_passes_info(TRUE, '79260000000'); -- только активные пропуска пользователя с номером телефона
