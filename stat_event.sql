@@ -8,11 +8,11 @@ SELECT
     e.note 
 FROM 
     gate01.event e
-JOIN 
+LEFT JOIN 
     gate01.pass p ON e.FK_pass = p.id
-JOIN 
+LEFT JOIN 
     gate01.user u ON p.FK_user = u.id
-JOIN
+LEFT JOIN
     gate01.camera c ON e.FK_camera = c.id
 WHERE 
     e.success = false
