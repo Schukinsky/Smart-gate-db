@@ -1,5 +1,5 @@
 # Data base for smart gate in PostgreSQL with Apache Superset visualization  
-## Модель базы данных в PostgreSQL для системы контроля и управления доступом транспорта с визуализацией в Apache Superset
+## Модель базы данных в PostgreSQL для системы контроля и управления доступом транспортных средств с визуализацией в Apache Superset
   
 ## Навигация:
 [Описание](#title1)
