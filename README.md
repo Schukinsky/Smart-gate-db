@@ -73,7 +73,8 @@
 | note           | VARCHAR(255) | Заметка                          |
 
 
-### <a id="title4">Индексы</a>
+## <a id="title4">Индексы</a>
+
 
 ## <a id="title5">DDL</a>
 [DDL.sql](DDL.sql)
@@ -88,7 +89,7 @@
 - Изменение пропуска по номеру телефона [procedure_edit_pass_phone.sql](procedure_edit_pass_phone.sql)
 - Изменение пропуска по номеру траспортного средства [procedure_edit_pass_vehicle.sql](procedure_edit_pass_vehicle.sql)
 - Блокировка всех объектов доступа по номеру телефона пользователя [procedure_block_allpass.sql](procedure_block_allpass.sql)
-- Разблокировка всех объектов доступа по номеру телефона пользователя [procedure_unblock_allpass.sql](procedure_unblock_allpass.sql 
+- Разблокировка всех объектов доступа по номеру телефона пользователя [procedure_unblock_allpass.sql](procedure_unblock_allpass.sql) 
 
 #### 2. Добавление событий:
 - Въезд по камере [procedure_add_event_camera_in.sql](procedure_add_event_camera_in.sql)
