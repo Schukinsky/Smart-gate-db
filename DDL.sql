@@ -7,33 +7,33 @@ CREATE SCHEMA IF NOT EXISTS gate01 AUTHORIZATION postgres;
 -- Создание таблиц в схеме данных
 CREATE TABLE IF NOT EXISTS gate01.user (
 	id SERIAL PRIMARY KEY,
-	last_name VARCHAR(32),
-	first_name VARCHAR(32),
-	middle_name VARCHAR(32),
-	phone VARCHAR(20) UNIQUE,
-	email VARCHAR(32),
-	address VARCHAR(255)
+	last_name VARCHAR(32) NOT NULL,
+	first_name VARCHAR(32) NOT NULL,
+	middle_name VARCHAR(32) NOT NULL,
+	phone VARCHAR(20) UNIQUE NOT NULL,
+	email VARCHAR(32) NOT NULL,
+	address VARCHAR(255) NOT NULL
 	);
-CREATE TABLE gate01.pass (
+CREATE TABLE IF NOT EXISTS gate01.pass (
 	id SERIAL PRIMARY KEY,
-	FK_user INTEGER REFERENCES gate01.user(id) ON DELETE CASCADE,
+	FK_user INTEGER REFERENCES gate01.user(id),
 	phone_number VARCHAR(20) UNIQUE,
 	vehicle_number VARCHAR(20) UNIQUE,
-	start_date DATE,
-	end_date DATE,
-	blocked BOOLEAN DEFAULT FALSE
+	start_date DATE NOT NULL,
+	end_date DATE NOT NULL,
+	blocked BOOLEAN DEFAULT FALSE NOT NULL
 	);
-CREATE TABLE gate01.camera (
+CREATE TABLE IF NOT EXISTS gate01.camera (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(10)
+	name VARCHAR(10) NOT NULL
 	);	
-CREATE TABLE gate01.event (
+CREATE TABLE IF NOT EXISTS gate01.event (
 	id SERIAL PRIMARY KEY,
-	FK_pass INTEGER REFERENCES gate01.pass(id) ON DELETE CASCADE,
-	event_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	vehicle_number VARCHAR(20),
-	FK_camera INTEGER REFERENCES gate01.camera(id) ON DELETE CASCADE,
-	photo_url VARCHAR(255),
-	success BOOLEAN,
+	FK_pass INTEGER REFERENCES gate01.pass(id),
+	event_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	vehicle_number VARCHAR(20) NOT NULL,
+	FK_camera INTEGER REFERENCES gate01.camera(id),
+	photo_url VARCHAR(255) NOT NULL,
+	success BOOLEAN NOT NULL,
 	note VARCHAR(255)
 	);

@@ -1,0 +1,13 @@
+database_name: PostgreSQL
+sqlalchemy_uri: postgresql+psycopg2://postgres:XXXXXXXXXX@192.168.1.23:5432/gate
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+uuid: b47c1628-cc3c-4d01-bcfe-a6e5d6595e82
+version: 1.0.0
