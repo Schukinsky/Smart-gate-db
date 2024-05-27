@@ -1,15 +1,14 @@
 # Data base for smart gate in PostgreSQL with Apache Superset visualization  
-Модель базы данных в PostgreSQL для системы контроля и управления доступом транспорта с визуализацией Apache Superset
-
+## Модель базы данных в PostgreSQL для системы контроля и управления доступом транспорта с визуализацией в Apache Superset
+  
 ## Навигация:
 [Описание](#title1)
 [ER-диаграмма](#title2)
 [Таблицы](#title3)
-[Индексы](#title4)
 [DDL](#title5)
 [DML](#title6)
 [Хранимые процедуры](#title7)
-[Функции](#title9)
+[Функции](#title8)
 [Представления](#title9)
 [Apache Superset](#title10)
 
@@ -29,7 +28,6 @@
 ## <a id="title3">Таблицы</a>
 
 ### Таблица `user`
-
 | Столбец     | Тип данных   | Описание                    |
 |-------------|--------------|-----------------------------|
 | id          | SERIAL       | Первичный ключ              |
@@ -41,7 +39,6 @@
 | address     | VARCHAR(255) | Адрес                       |
 
 ### Таблица `pass`
-
 | Столбец        | Тип данных   | Описание                                   |
 |----------------|--------------|--------------------------------------------|
 | id             | SERIAL       | Первичный ключ                             |
@@ -53,14 +50,12 @@
 | blocked        | BOOLEAN      | Заблокирован ли пропуск                    |
 
 ### Таблица `camera`
-
 | Столбец | Тип данных  | Описание       |
 |---------|-------------|----------------|
 | id      | SERIAL      | Первичный ключ |
 | name    | VARCHAR(10) | Название камеры|
 
 ### Таблица `event`
-
 | Столбец        | Тип данных   | Описание                         |
 |----------------|--------------|----------------------------------|
 | id             | SERIAL       | Первичный ключ                   |
@@ -72,16 +67,13 @@
 | success        | BOOLEAN      | Успешность события               |
 | note           | VARCHAR(255) | Заметка                          |
 
-
-## <a id="title4">Индексы</a>
-
-
 ## <a id="title5">DDL</a>
 [DDL.sql](DDL.sql)
+
 ## <a id="title6">DML</a>
 [DML.sql](DML.sql)
-## <a id="title7">Хранимые процедуры</a>
 
+## <a id="title7">Хранимые процедуры</a>
 #### 1. Управление доступом:
 - Создание пользователя [procedure_create_user.sql](procedure_create_user.sql)
 - Добавление пропуска по номеру телефона [procedure_add_pass_phone.sql](procedure_add_pass_phone.sql) 
@@ -90,7 +82,6 @@
 - Изменение пропуска по номеру траспортного средства [procedure_edit_pass_vehicle.sql](procedure_edit_pass_vehicle.sql)
 - Блокировка всех объектов доступа по номеру телефона пользователя [procedure_block_allpass.sql](procedure_block_allpass.sql)
 - Разблокировка всех объектов доступа по номеру телефона пользователя [procedure_unblock_allpass.sql](procedure_unblock_allpass.sql) 
-
 #### 2. Добавление событий:
 - Въезд по камере [procedure_add_event_camera_in.sql](procedure_add_event_camera_in.sql)
 - Выезд по камере [procedure_add_event_camera_out.sql](procedure_add_event_camera_out.sql)
